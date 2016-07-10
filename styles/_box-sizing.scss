@@ -11,3 +11,14 @@ html {
     box-sizing: inherit;
   }
 }
+
+.page-wrapper {
+  width: 100%;
+  padding: 15 * $gutter;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
