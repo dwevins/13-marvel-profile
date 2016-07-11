@@ -9,7 +9,7 @@ export default function (app) {
     .then((res) => res.json())
     .then((result) => {
       console.log(result);
-      const view = new SeriesInfoView(app, result);
+      const view = new SeriesInfoView(leftPane, result);
       view.render();
     });
 }
