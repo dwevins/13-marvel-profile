@@ -48,5 +48,9 @@
     display: flex;
     flex-direction: column;
     font-size: 1.2rem;
+
+    &--item {
+      margin: 0.2rem 0;
+    }
   }
 }
