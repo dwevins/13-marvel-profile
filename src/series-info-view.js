@@ -1,14 +1,14 @@
 'use strict';
 
 export default class SeriesInfoView {
-  constructor(parent, data) {
+  constructor(parent, object) {
     const elements = {
-      image: '',
-      title: '',
+      image: object.data.results.thumbnail.path,
+      title: object.data.results.name,
       startDate: '',
       endDate: '',
       creatorList: '',
-    }
+    };
   }
 
   render() {
