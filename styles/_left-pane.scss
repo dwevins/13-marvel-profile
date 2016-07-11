@@ -1,0 +1,52 @@
+.left-pane {
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &__img {
+    width: 100%;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+  }
+
+  &__dates {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+}
+
+.creators {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin: 0;
+    border-bottom: 1px solid $black;
+    font-size: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+}
