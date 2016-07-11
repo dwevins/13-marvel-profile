@@ -101,6 +101,8 @@
 
   &__button {
     width: 100%;
-
+    border: 0;
+    background: $dark-blue;
+    color: $white;
   }
 }
