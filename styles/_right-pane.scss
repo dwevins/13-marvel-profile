@@ -1,0 +1,31 @@
+.right-pane {
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.characters {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__title {
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    &--item {
+      display: flex;
+      flex-wrap: wrap;
+      width: 20%;
+    }
+  }
+}
