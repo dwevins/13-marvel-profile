@@ -17,6 +17,16 @@ html {
   padding: 0 10 * $gutter;
 }
 
+.page-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+}
+
 .app {
   display: flex;
   flex-direction: row;
