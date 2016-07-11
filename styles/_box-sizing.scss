@@ -24,5 +24,9 @@ html {
 
   .rounded {
     border-radius: 5%;
+
+    &-btn {
+      border-radius: 10%;
+    }
   }
 }
