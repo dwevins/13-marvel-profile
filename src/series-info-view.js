@@ -2,7 +2,8 @@
 
 export default class SeriesInfoView {
   constructor(parent, object) {
-    const image = object.data.results.thumbnail.path;
+    console.log(object);
+    const image = object.data.results[0].thumbnail.path;
     const ext = object.data.results.thumbnail.extension;
     const title = object.data.results.title;
     const startDate = object.data.results.startYear;
@@ -11,18 +12,26 @@ export default class SeriesInfoView {
     const copyright = object.attributionHTML;
 
     this.elements = {
-      showcase: parent.querySelector('showcase__img'),
-      title: parent.querySelector('info__title'),
-      dates: parent.querySelector('info__dates'),
-      creators: parent.querySelector('creators__list'),
+      showcase: parent.querySelector('.showcase'),
+      title: parent.querySelector('.info__title'),
+      dates: parent.querySelector('.info__dates'),
+      creators: parent.querySelector('.creators__list'),
     };
   }
 
   render() {
-
+    this.populateShowcase();
+    this.populateCreatorsList();
   }
 
-  createListItem() {
+  populateShowcase() {
+    const img = document.createElement('img');
+    img.className = 'showcase__img';
+    img.setAttribute('src', `${this.image}+${this.ext}`);
+    this.elements.showcase.appendChild(img);
+  }
+
+  populateCreatorsList() {
     this.creatorList.forEach((creator) => {
       const item = document.createElement('li');
       item.className = 'creators__list--item';
