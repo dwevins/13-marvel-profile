@@ -19,10 +19,15 @@ export default class SeriesInfoView {
   }
 
   render() {
+
+  }
+
+  createListItem() {
     this.creatorList.forEach((creator) => {
       const item = document.createElement('li');
       item.className = 'creators__list--item';
       item.innerText = creator.name;
+      this.elements.creators.appendChild(item);
     });
   }
 
