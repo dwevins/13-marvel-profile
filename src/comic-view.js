@@ -19,4 +19,10 @@ export default class ComicView {
     });
   }
 
+  populateListItem(parent, comic) {
+    const imgBox = parent.document.createElement('div');
+    const issueBox = parent.document.createElement('div')
+
+  }
+
 }
