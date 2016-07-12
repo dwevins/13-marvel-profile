@@ -1,6 +1,6 @@
 'use strict';
 
-export default class ComicView {
+export default class ComicListView {
   constructor(parent, object) {
     this.comicArray = object.data.results.split(0, 3);
 
@@ -19,10 +19,19 @@ export default class ComicView {
     });
   }
 
-  populateListItem(parent, comic) {
-    const imgBox = parent.document.createElement('div');
-    const issueBox = parent.document.createElement('div')
-
+  populateListItem(element, comic) {
+    const imgBox = document.createElement('div');
+    const issueBox = document.createElement('div');
+    const buttonBox = document.createElement('div');
+    imgBox.className = 'comics__img';
+    issueBox.className = 'comics__issue';
+    buttonBox.className = 'comics__button';
+    this.populateImg(element, comic);
+    this.populateIssue(element, comic);
+    this.populateButton(element, comic);
+    element.appendChild(imgBox);
+    element.appendChild(issueBox);
+    element.appendChild(buttonBox);
   }
 
 }
