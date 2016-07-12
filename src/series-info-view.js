@@ -2,13 +2,12 @@
 
 export default class SeriesInfoView {
   constructor(parent, object) {
-    console.log(object);
     this.image = object.data.results[0].thumbnail.path;
     this.ext = object.data.results[0].thumbnail.extension;
-    this.title = object.data.results.title;
-    this.startDate = object.data.results.startYear;
-    this.endDate = object.data.results.endYear;
-    this.creatorList = object.data.results.creators;
+    this.title = object.data.results[0].title;
+    this.startDate = object.data.results[0].startYear;
+    this.endDate = object.data.results[0].endYear;
+    this.creatorList = object.data.results[0].creators.items;
     this.copyright = object.attributionHTML;
 
     this.elements = {
@@ -22,6 +21,7 @@ export default class SeriesInfoView {
   render() {
     this.populateShowcase();
     this.populateCreatorsList();
+    this.populateTitle();
   }
 
   populateShowcase() {
@@ -33,6 +33,7 @@ export default class SeriesInfoView {
   }
 
   populateCreatorsList() {
+    this.elements.creators.innerHTML = '';
     this.creatorList.forEach((creator) => {
       const item = document.createElement('li');
       item.className = 'creators__list--item';
@@ -41,5 +42,11 @@ export default class SeriesInfoView {
     });
   }
 
+  populateTitle() {
+    this.elements.title.innerText = this.title;
+  }
 
+  populateDates() {
+    this.elements.dates.innerText = this.dates;
+  }
 }
