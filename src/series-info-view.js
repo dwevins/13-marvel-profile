@@ -3,13 +3,13 @@
 export default class SeriesInfoView {
   constructor(parent, object) {
     console.log(object);
-    const image = object.data.results[0].thumbnail.path;
-    const ext = object.data.results.thumbnail.extension;
-    const title = object.data.results.title;
-    const startDate = object.data.results.startYear;
-    const endDate = object.data.results.endYear;
-    const creatorList = object.data.results.creators;
-    const copyright = object.attributionHTML;
+    this.image = object.data.results[0].thumbnail.path;
+    this.ext = object.data.results[0].thumbnail.extension;
+    this.title = object.data.results.title;
+    this.startDate = object.data.results.startYear;
+    this.endDate = object.data.results.endYear;
+    this.creatorList = object.data.results.creators;
+    this.copyright = object.attributionHTML;
 
     this.elements = {
       showcase: parent.querySelector('.showcase'),
@@ -25,9 +25,10 @@ export default class SeriesInfoView {
   }
 
   populateShowcase() {
+    this.elements.showcase.innerHTML = '';
     const img = document.createElement('img');
     img.className = 'showcase__img';
-    img.setAttribute('src', `${this.image}+${this.ext}`);
+    img.setAttribute('src', `${this.image}.${this.ext}`);
     this.elements.showcase.appendChild(img);
   }
 
