@@ -28,7 +28,7 @@ export default class SeriesInfoView {
   populateShowcase() {
     this.elements.showcase.innerHTML = '';
     const img = document.createElement('img');
-    img.className = 'showcase__img';
+    img.className = 'rounded showcase__img';
     img.setAttribute('src', `${this.image}.${this.ext}`);
     this.elements.showcase.appendChild(img);
   }
