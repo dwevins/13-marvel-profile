@@ -2,6 +2,7 @@
 
 import SeriesInfoView from 'series-info-view';
 import CharacterInfoView from 'character-info-view';
+import ComicView from 'comic-view';
 export default function (app) {
   const leftPane = app.querySelector('.left-pane__content');
   const characters = app.querySelector('.characters');
@@ -24,5 +25,6 @@ export default function (app) {
     .then((res) => res.json())
     .then((result) => {
       console.log(result);
+      const view = new ComicView();
     });
 }
