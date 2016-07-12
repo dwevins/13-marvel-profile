@@ -107,9 +107,10 @@
 
   &__button {
     display: flex;
-    width: 100%;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+
     &--btn {
       width: 100%;
       padding: 0.5 * $gutter 0;
