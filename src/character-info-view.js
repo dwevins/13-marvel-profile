@@ -5,13 +5,15 @@ export default class CharacterInfoView {
     this.characterArray = object.data.results;
 
     this.elements = {
-      characterList: parent.querySelector('.character__list'),
+      characterList: parent.querySelector('.characters__list'),
     };
   }
 
   render() {
+    this.elements.characterList.innerHTML = '';
     this.characterArray.forEach((character) => {
       const li = document.createElement('li');
+      li.className = 'characters__list--item';
       this.populateListItem(li, character);
       this.populateList(li);
     });
@@ -24,6 +26,8 @@ export default class CharacterInfoView {
     nameBox.className = 'characters__name';
     this.populateImg(imgBox, character);
     this.populateName(nameBox, character);
+    element.appendChild(imgBox);
+    element.appendChild(nameBox);
   }
 
   populateImg(element, character) {
@@ -35,10 +39,13 @@ export default class CharacterInfoView {
   }
 
   populateName(element, character) {
-
+    const name = document.createElement('p');
+    name.className = 'characters__name--text';
+    name.innerText = `${character.name}`;
+    element.appendChild(name);
   }
 
   populateList(element) {
-
+    this.elements.characterList.appendChild(element);
   }
 }
