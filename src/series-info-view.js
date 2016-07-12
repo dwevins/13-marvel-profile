@@ -20,8 +20,9 @@ export default class SeriesInfoView {
 
   render() {
     this.populateShowcase();
-    this.populateCreatorsList();
     this.populateTitle();
+    this.populateDates();
+    this.populateCreatorsList();
   }
 
   populateShowcase() {
@@ -30,6 +31,14 @@ export default class SeriesInfoView {
     img.className = 'showcase__img';
     img.setAttribute('src', `${this.image}.${this.ext}`);
     this.elements.showcase.appendChild(img);
+  }
+
+  populateTitle() {
+    this.elements.title.innerText = this.title;
+  }
+
+  populateDates() {
+    this.elements.dates.innerText = `${this.startDate} - ${this.endDate}`;
   }
 
   populateCreatorsList() {
@@ -42,11 +51,4 @@ export default class SeriesInfoView {
     });
   }
 
-  populateTitle() {
-    this.elements.title.innerText = this.title;
-  }
-
-  populateDates() {
-    this.elements.dates.innerText = this.dates;
-  }
 }
