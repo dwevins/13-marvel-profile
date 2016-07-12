@@ -41,4 +41,11 @@ export default class ComicListView {
     img.setAttribute('src', imgpath);
     element.appendChild(img);
   }
+
+  populateIssue(element, comic) {
+    const issue = document.createElement('p');
+    issue.className = 'comics__issue--text';
+    issue.innerText = comic.title;
+    element.appendChild(comic);
+  }
 }
