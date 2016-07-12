@@ -48,4 +48,11 @@ export default class ComicListView {
     issue.innerText = comic.title;
     element.appendChild(comic);
   }
+
+  populateButton(element, comic) {
+    const btn = document.createElement('button');
+    btn.className = 'rounded-btn comics__button--btn';
+    btn.innerText = 'Read More';
+    element.appendChild(btn);
+  }
 }
