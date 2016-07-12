@@ -27,7 +27,11 @@ export default class CharacterInfoView {
   }
 
   populateImg(element, character) {
-
+    const img = document.createElement('img');
+    const imgPath = `${character.thumbnail.path}.${character.thumbnail.extension}`;
+    img.className = 'rounded characters__image--img';
+    img.setAttribute('src', imgPath);
+    element.appendChild(img);
   }
 
   populateName(element, character) {
