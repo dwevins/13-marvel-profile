@@ -6,6 +6,7 @@ export default class ComicListView {
 
     this.elements = {
       comicList: parent.querySelector('.comics__list'),
+      infoPane: parent.querySelector('.info-pane'),
     };
   }
 
@@ -53,6 +54,9 @@ export default class ComicListView {
     const btn = document.createElement('button');
     btn.className = 'rounded-btn comics__button--btn';
     btn.innerText = 'Read More';
+    btn.addEventListener('click', this.displayInfo(comic));
     element.appendChild(btn);
   }
+
+  displayInfo()
 }
