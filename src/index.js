@@ -25,6 +25,6 @@ export default function (app) {
     .then((res) => res.json())
     .then((result) => {
       console.log(result);
-      const view = new ComicView();
+      const view = new ComicView(comics, result);
     });
 }
