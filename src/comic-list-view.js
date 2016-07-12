@@ -34,4 +34,11 @@ export default class ComicListView {
     element.appendChild(buttonBox);
   }
 
+  populateImg(element, comic) {
+    const img = document.createElement('img');
+    const imgpath = `${comic.thumbnail.path}.${comic.thumbnail.extension}`;
+    img.className = 'rounded comics__image--img';
+    img.setAttribute('src', imgpath);
+    element.appendChild(img);
+  }
 }
