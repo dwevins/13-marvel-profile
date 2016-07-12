@@ -106,10 +106,16 @@
   }
 
   &__button {
+    display: flex;
     width: 100%;
-    padding: 0.5 * $gutter 0;
-    border: 0;
-    background: $dark-blue;
-    color: $white;
+    justify-content: center;
+    align-items: center;
+    &--btn {
+      width: 100%;
+      padding: 0.5 * $gutter 0;
+      border: 0;
+      background: $dark-blue;
+      color: $white;
+    }
   }
 }
