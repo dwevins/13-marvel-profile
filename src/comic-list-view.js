@@ -58,5 +58,8 @@ export default class ComicListView {
     element.appendChild(btn);
   }
 
-  displayInfo()
+  displayInfo() {
+    this.elements.infoPane.style('display: fixed');
+    const closeBtn = this.elements.infoPane.querySelector('.close-btn');
+  }
 }
