@@ -26,5 +26,6 @@ export default function (app) {
     .then((result) => {
       console.log(result);
       const view = new ComicListView(comics, result);
+      view.render();
     });
 }
