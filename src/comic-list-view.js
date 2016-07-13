@@ -2,7 +2,7 @@
 
 export default class ComicListView {
   constructor(parent, object) {
-    this.comicArray = object.data.results.slice(0, 4);
+    this.comicArray = object.data.results;
 
     this.elements = {
       comicList: parent.querySelector('.comics__list'),
@@ -56,7 +56,7 @@ export default class ComicListView {
     btn.className = 'rounded-btn comics__button--btn';
     btn.innerText = 'Read More';
     btn.addEventListener('click', () => {
-
+      this.elements.infoPane.classList.add('.info-pane--active');
     });
     element.appendChild(btn);
   }
