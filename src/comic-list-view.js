@@ -61,4 +61,8 @@ export default class ComicListView {
     element.appendChild(btn);
   }
 
+  populateList(element) {
+    this.elements.comicList.appendChild(element);
+  }
+
 }
