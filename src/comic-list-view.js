@@ -2,11 +2,12 @@
 
 export default class ComicListView {
   constructor(parent, object) {
-    this.comicArray = object.data.results.split(0, 3);
+    this.comicArray = object.data.results.slice(0, 3);
 
     this.elements = {
       comicList: parent.querySelector('.comics__list'),
       infoPane: parent.querySelector('.info-pane'),
+      closeBtnDiv: parent.querySelector('info-pane__box--btn'),
     };
   }
 
@@ -58,8 +59,7 @@ export default class ComicListView {
     element.appendChild(btn);
   }
 
-  displayInfo() {
-    this.elements.infoPane.style('display: fixed');
-    const closeBtn = this.elements.infoPane.querySelector('.close-btn');
+  displayInfo(comic) {
+    this.elements.infoPane.classList.add('.info-pane__active');
   }
 }
