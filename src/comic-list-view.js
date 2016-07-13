@@ -55,11 +55,10 @@ export default class ComicListView {
     const btn = document.createElement('button');
     btn.className = 'rounded-btn comics__button--btn';
     btn.innerText = 'Read More';
-    btn.addEventListener('click', this.displayInfo(comic));
+    btn.addEventListener('click', () => {
+
+    });
     element.appendChild(btn);
   }
 
-  displayInfo(comic) {
-    this.elements.infoPane.classList.add('.info-pane__active');
-  }
 }
