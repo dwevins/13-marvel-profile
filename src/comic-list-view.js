@@ -64,5 +64,4 @@ export default class ComicListView {
   populateList(element) {
     this.elements.comicList.appendChild(element);
   }
-
 }

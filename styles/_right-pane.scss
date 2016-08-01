@@ -1,5 +1,6 @@
 .right-pane {
-  width: 65%;
+  width: 45%;
+  min-width: $min-width;
 
   &__content {
     display: flex;

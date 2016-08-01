@@ -3,7 +3,6 @@
 export default class CharacterInfoView {
   constructor(parent, object) {
     this.characterArray = object.data.results;
-    console.log(this.characterArray);
 
     this.elements = {
       characterList: parent.querySelector('.characters__list'),
