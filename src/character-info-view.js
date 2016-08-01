@@ -22,7 +22,7 @@ export default class CharacterInfoView {
   populateListItem(element, character) {
     const imgBox = document.createElement('div');
     const nameBox = document.createElement('div');
-    imgBox.className = 'characters__image';
+    imgBox.className = 'characters__image image-frame';
     nameBox.className = 'characters__name';
     this.populateImg(imgBox, character);
     this.populateName(nameBox, character);
@@ -33,7 +33,7 @@ export default class CharacterInfoView {
   populateImg(element, character) {
     const img = document.createElement('img');
     const imgPath = `${character.thumbnail.path}.${character.thumbnail.extension}`;
-    img.className = 'rounded characters__image--img';
+    img.className = 'rounded characters__image--img image-frame__img';
     img.setAttribute('src', imgPath);
     element.appendChild(img);
   }

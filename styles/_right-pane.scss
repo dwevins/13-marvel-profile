@@ -1,5 +1,5 @@
 .right-pane {
-  width: 45%;
+  width: calc(50% - 1rem);
   min-width: $min-width;
 
   &__content {
