@@ -25,12 +25,12 @@ export default class ComicListView {
     const imgBox = document.createElement('div');
     const issueBox = document.createElement('div');
     const buttonBox = document.createElement('div');
-    imgBox.className = 'comics__image image-frame';
+    imgBox.className = 'rounded comics__image image-frame';
     issueBox.className = 'comics__issue';
     buttonBox.className = 'comics__button';
-    this.populateImg(element, comic);
-    this.populateIssue(element, comic);
-    this.populateButton(element, comic);
+    this.populateImg(imgBox, comic);
+    this.populateIssue(issueBox, comic);
+    this.populateButton(buttonBox, comic);
     element.appendChild(imgBox);
     element.appendChild(issueBox);
     element.appendChild(buttonBox);
@@ -39,7 +39,7 @@ export default class ComicListView {
   populateImg(element, comic) {
     const img = document.createElement('img');
     const imgpath = `${comic.thumbnail.path}.${comic.thumbnail.extension}`;
-    img.className = 'rounded comics__image--img image-frame__img';
+    img.className = 'comics__image--img image-frame__img';
     img.setAttribute('src', imgpath);
     element.appendChild(img);
   }

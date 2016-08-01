@@ -16,10 +16,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    margin: 0 -$gutter;
 
     &--item {
       width: 20%;
       min-width: 0.5 * $min-width;
+      margin: $gutter;
     }
   }
 

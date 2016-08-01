@@ -1,26 +1,8 @@
 .image-frame {
-  // width: 100px;
-  // height: 100px;
-  // overflow: hidden;
-  position: relative;
-  width: 100px;
-
-  &::before {
-    display: block;
-    padding-top: 100%;
-  }
+  width: 100%;
+  overflow: hidden;
 
   &__img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    // width: auto;
-    // min-width: 100%;
-    // height: auto;
-    // min-height: 100%;
-    // object-fit: contain;
-    // object-position: 50% 50%;
+    width: 100%
   }
 }
