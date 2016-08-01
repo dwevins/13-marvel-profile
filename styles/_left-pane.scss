@@ -1,7 +1,8 @@
 .left-pane {
   display: flex;
   flex-direction: column;
-  width: calc(50% - 1rem);
+  width: calc(25% - 2rem);
+  margin: 0 1rem;
   min-width: $min-width;
 
   &__content {
