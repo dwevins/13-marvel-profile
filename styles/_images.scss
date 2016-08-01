@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: red;
 
   &__img {
     display: block;
@@ -16,14 +15,9 @@
     object-fit: cover;
   }
 
-  &:hover::before {
-    padding-top: calc(100%); 	/* initial ratio of 1:1*/
-  }
-
   &::before {
     display: block;
-    padding-top: calc(100% / 16 * 9); 	/* initial ratio of 1:1*/
-    transition: padding 200ms ease-in;
+    padding-top: calc(100%); 	// initial ratio of 1:1
     content: '';
  }
 }

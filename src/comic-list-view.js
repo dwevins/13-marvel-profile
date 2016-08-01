@@ -28,9 +28,10 @@ export default class ComicListView {
     imgBox.className = 'rounded comics__image image-frame';
     issueBox.className = 'comics__issue';
     buttonBox.className = 'comics__button';
+    this.populateOverlay(element, comic);
     this.populateImg(imgBox, comic);
     this.populateIssue(issueBox, comic);
-    this.populateButton(buttonBox, comic);
+    this.populateButton(element, buttonBox);
     element.appendChild(imgBox);
     element.appendChild(issueBox);
     element.appendChild(buttonBox);
@@ -51,17 +52,33 @@ export default class ComicListView {
     element.appendChild(issue);
   }
 
-  populateButton(element, comic) {
+  populateButton(parent, element) {
     const btn = document.createElement('button');
     btn.className = 'rounded-btn comics__button--btn';
     btn.innerText = 'Read More';
     btn.addEventListener('click', () => {
-      this.elements.infoPane.classList.add('.info-pane--active');
+      parent.querySelector('.info-pane').classList.add('info-pane--active');
     });
     element.appendChild(btn);
   }
 
   populateList(element) {
     this.elements.comicList.appendChild(element);
+  }
+
+  populateOverlay(parent, comic) {
+    const overlay = document.createElement('div');
+    overlay.classList = 'info-pane';
+    overlay.innerHTML = `
+      <div class='info-pane__box'>
+        <span class='fa fa-times info-pane__box--btn'.</span>
+        <p class='info-pane__box--text'></p>
+      </div>
+    `;
+    overlay.querySelector('.info-pane__box--text').innerText = comic.description;
+    overlay.querySelector('.info-pane__box--btn').addEventListener('click', () => {
+      overlay.classList.remove('info-pane--active');
+    });
+    parent.appendChild(overlay);
   }
 }

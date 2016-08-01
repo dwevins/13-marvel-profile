@@ -5,16 +5,20 @@
   left: 0;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: $black-transparent;
 
   &__box {
     width: 60%;
     background: $white;
+
+    &--btn {
+      float: right;
+    }
   }
 }
 
-.info-pane__active {
+.info-pane--active {
   display: flex;
 }
