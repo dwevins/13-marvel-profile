@@ -6,8 +6,28 @@ html {
 * {
   box-sizing: inherit;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     box-sizing: inherit;
+  }
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: $gutter (-$gutter);
+
+  .rounded {
+    border-radius: 15px;
+
+    &-btn {
+      border-radius: 10px;
+    }
   }
 }

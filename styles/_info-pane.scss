@@ -1,0 +1,32 @@
+.info-pane {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: $black-transparent;
+  z-index: 99999;
+
+  &__box {
+    width: 100%;
+    min-width: $min-width;
+    max-width: $max-width;
+    padding: $gutter;
+    background: $white;
+
+    &--btn {
+      text-align: right;
+    }
+
+    &--text {
+      text-align: justify;
+    }
+  }
+}
+
+.info-pane--active {
+  display: flex;
+}

@@ -1,0 +1,41 @@
+
+.characters {
+
+  &__title {
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid $black;
+    font-size: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 (-$gutter);
+
+    &--item {
+      width: 20%;
+      min-width: 0.5 * $min-width;
+      max-width: $min-width;
+      margin: $gutter;
+    }
+  }
+
+  // &__image {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  // }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &--text {
+      width: 100%;
+    }
+  }
+}

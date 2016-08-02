@@ -1,16 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <title>13-marvel-profile</title>
+  <title>13-Marvel-Profile</title>
   <link rel="stylesheet" href="/app.css">
 </head>
+
 <body>
+    <header class="page-header">
+      <div class="container">
+        <p class="marvel">Marvel</p>
+      </div>
+    </header>
+    <div class="container">
+        <div class="app">
+          <div class="left-pane">
+            <div class="left-pane__content">
+              <div class="showcase">
+                <img src="" alt="" class="rounded showcase__img">
+              </div>
+              <div class="info">
+                <h3 class="info__title"></h3>
+                <p class="info__dates"></p>
+              </div>
+              <div class="creators">
+                <h3 class="creators__title">Creators</h3>
+                <ul class="creators__list">
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="right-pane">
+            <div class="right-pane__content">
+              <div class="characters">
+                <h2 class="characters__title">Characters</h2>
+                <ul class="characters__list">
+                </ul>
+              </div>
+              <div class="comics">
+                <h2 class="comics__title">Comics</h2>
+                <ul class="comics__list">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="/vendor.js" charset="utf-8"></script>
+    <script src="/app.js" charset="utf-8"></script>
 
-  <script src="/vendor.js" charset="utf-8"></script>
-  <script src="/app.js" charset="utf-8"></script>
-
-  <script type="text/javascript">
-  </script>
+    <script type="text/javascript">
+      const start = require('index');
+      const app = document.querySelector('.app');
+      start(app);
+    </script>
 </body>
+
 </html>

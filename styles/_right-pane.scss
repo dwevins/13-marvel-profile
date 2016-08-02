@@ -1,0 +1,11 @@
+.right-pane {
+  width: calc(75% - 2rem);
+  min-width: $min-width;
+  margin: 0 1rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
